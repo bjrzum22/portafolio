@@ -32,6 +32,42 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/about', (req, res) => {
+    res.render('document.ejs', {
+        pageTitle: 'About',
+        pageStyle: 'about',
+        pageScript: 'about',
+        pageView: '../components/about.ejs',
+        header: components.header('about'),
+        footer: components.footer()
+
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('document.ejs', {
+        pageTitle: 'Projects',
+        pageStyle: 'projects',
+        pageScript: 'projects',
+        pageView: '../components/projects.ejs',
+        header: components.header('projects'),
+        footer: components.footer()
+
+    });
+});
+
+app.get('/contact', (req, res) => {
+    res.render('document.ejs', {
+        pageTitle: 'Contact',
+        pageStyle: 'contact',
+        pageScript: 'contact',
+        pageView: '../components/contact.ejs',
+        header: components.header('contact'),
+        footer: components.footer()
+
+    });
+});
+
 //iniciar servidor
 app.listen(port, () => {
     console.log(`Servidor iniciado en el puerto ${port}`);

@@ -99,6 +99,7 @@ body {
         .content-skin {
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             padding: 1rem;
 
@@ -174,8 +175,9 @@ body {
                 display: none;
                 position: absolute;
                 top: 60px;
-                left: 0;
+                right: 0;
                 width: 100%;
+                max-width: 300px;
                 background-color: lighten($gray-dark, 10%);
                 padding: 1rem;
                 flex-direction: column;
@@ -186,8 +188,24 @@ body {
                         margin-bottom: 1rem;
                     }
                 }
+
+                &.active {
+                    display: flex;
+                }
             }
         }
     }
 
+    .footer {
+        .content-footer {
+            .container-footer {
+                flex-direction: column;
+
+                .item-footer {
+                    margin-bottom: 1rem;
+                }
+
+            }
+        }
+    }
 }
