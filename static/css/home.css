@@ -168,6 +168,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 .main .dark-bg {
   position: absolute;
@@ -182,22 +183,91 @@ body {
   align-items: center;
   height: 100%;
   padding: 1em;
+  margin-right: 3em;
 }
-.main .img-content .img-profile {
-  z-index: 2;
+.main .img-content .container-animation .border-circle {
+  width: 250px;
+  height: 250px;
+  border: 7px solid #ff5a1d;
+  border-radius: 50%;
   position: relative;
-  width: 500px;
-  height: 500px;
-  overflow: hidden;
-  border: 10px solid #ff7f50;
+  z-index: 2;
+  animation: rotate 50s infinite linear;
 }
-.main .img-content .img-profile img {
-  width: 550px;
+.main .img-content .container-animation .border-circle .item-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ff5a1d;
+  border-radius: 50%;
   position: absolute;
-  filter: grayscale(10%) contrast(1.2) drop-shadow(0 0 0.75rem #000);
-  opacity: 0.9;
-  top: -15%;
-  left: -5%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .img-content .container-animation .border-circle .item-circle.item-circle-1 {
+  animation: moveTop 5s infinite linear;
+}
+.main .img-content .container-animation .border-circle .item-circle.item-circle-2 {
+  animation: moveRight 5s infinite linear;
+}
+.main .img-content .container-animation .border-circle .item-circle.item-circle-3 {
+  animation: moveBottom 5s infinite linear;
+}
+.main .img-content .container-animation .border-circle .item-circle.item-circle-4 {
+  animation: moveLeft 5s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveTop {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: -10%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes moveRight {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: 110%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes moveBottom {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 110%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+@keyframes moveLeft {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: -10%;
+  }
+  100% {
+    left: 50%;
+  }
 }
 .main .container-text {
   position: absolute;
@@ -276,16 +346,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     height: max-content;
-  }
-  .main .img-content .img-profile {
-    width: 250px;
-    height: 250px;
-    border: 7px solid #ff7f50;
-  }
-  .main .img-content .img-profile img {
-    width: 250px;
-    top: -10%;
-    left: -10%;
+    margin-right: 0;
   }
   .main .container-text {
     position: initial;

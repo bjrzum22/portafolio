@@ -1,47 +1,58 @@
 <main class="main">
     <div class="dark-bg"></div>
     <div class="img-content">
-        <div class="img-profile">
-        <img src="./img/damar.png" alt="profile">
+        <div class="container-animation">
+            <div class="border-circle">
+                <div class="item-circle item-circle-1"></div>
+                <div class="item-circle item-circle-2"></div>
+                <div class="item-circle item-circle-3"></div>
+                <div class="item-circle item-circle-4"></div>
+            </div>
+        </div>
     </div>
     </div>
     
     <div class="container-text">
         <h1>
-            Hola, soy <span class="name">Damar Narváez.</span><span class="cursor">|</span>
+            Hola, somos <span class="name">BJRSoftware.</span><span class="cursor">|</span>
         </h1>
         <p class="text">
-            ¡Bienvenido a mi rincón digital! Soy un apasionado desarrollador de software con experiencia en la creación de proyectos web y de escritorio. Mi misión es transformar ideas en soluciones digitales funcionales y atractivas.
+            ¡Bienvenido a BJRSoftware! Somos una empresa dedicada al desarrollo de software con un enfoque claro: convertir ideas en soluciones digitales innovadoras. 
         </p>
     </div>
 </main>
-<section class="section section-1">
-    <div class="container">
-        <h2>
-            ¿Quién soy?
-        </h2>
-        <p>
-            Soy Damar, un entusiasta del código y la tecnología.
-            Mi viaje en el desarrollo de software me ha llevado a trabajar con tecnologías como PHP, 
-            Node.js, JavaScript, MySQL, y muchas más. Disfruto del desafío de encontrar soluciones 
-            creativas para problemas complejos y tengo un compromiso constante con el 
-            aprendizaje y la mejora continua.
-        </p>
-    </div>
-</section>
-<section class="section section-2">
-    <div class="container">
-        <h2>
-            ¿Que hago?
-        </h2>
-        <p>
-           Mi enfoque principal es el desarrollo web y de escritorio. 
-           He trabajado en diversos proyectos, 
-           desde aplicaciones web interactivas 
-           hasta robustas aplicaciones de escritorio 
-           utilizando Electron.js. Mi habilidad para 
-           trabajar con bases de datos como MySQL y 
-           SQLite me permite diseñar sistemas eficientes y escalables.
-        </p>
+<section class="section">
+    <div class="container-cards">
+        <%
+            let ArrayObjectPerson =[
+                {
+                    name: 'Damar Narváez',
+                    position: 'Desarrollador de Software',
+                    img: 'damar',
+                    description: '¡Hola! Soy Damar Narváez, un apasionado Desarrollador de Software con experiencia en la creación de soluciones digitales innovadoras. Mi enfoque se centra en transformar ideas en código, construyendo aplicaciones web y de escritorio que no solo cumplen con los requisitos, sino que superan las expectativas.'  
+                },
+                {
+                    name: 'Esilda Narváez',
+                    position: 'Desarrollador web',
+                    img: 'esilda',
+                    description: '¡Hola! Soy Esilda Narváez, una apasionada Especialista en Desarrollo Web con un enfoque destacado en WordPress. Mi experiencia se centra en crear sitios web atractivos y funcionales que destacan la identidad única de cada cliente.'
+                }
+            ]
+
+            ArrayObjectPerson.forEach((person, index) => {
+        %>
+        <div class="card">
+            <div class="card-img">
+                <img src="./img/<%= person.img %>.png" alt="<%= person.name %>">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title"><%= person.name %></h3>
+                <p class="card-text"><%= person.position %></p>
+                <p class="card-text"><%= person.description %></p>
+            </div>
+        </div>
+        <%
+            })
+        %>
     </div>
 </section>
