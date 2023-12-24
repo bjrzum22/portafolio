@@ -14,7 +14,7 @@ class Components {
                 </div>
                 <div class="container-nav">
                     <a href="/" class="item-nav ${active === 'home' ? 'active' : ''}">Inicio</a>
-                    <a href="/about" class="item-nav ${active === 'about' ? 'active' : ''}">Sobre mi</a>
+                    <a href="/about" class="item-nav ${active === 'about' ? 'active' : ''}">Nosotros</a>
                     <a href="/projects" class="item-nav ${active === 'projects' ? 'active' : ''}">Proyectos</a>
                     <a href="/contact" class="item-nav ${active === 'contact' ? 'active' : ''}">Contacto</a>
                 </div>

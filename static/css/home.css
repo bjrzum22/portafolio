@@ -37,6 +37,7 @@ body {
   padding: 1rem;
   background-color: #353535;
   height: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .header .content-icon {
   display: flex;
@@ -192,7 +193,7 @@ body {
   border-radius: 50%;
   position: relative;
   z-index: 2;
-  animation: rotate 50s infinite linear;
+  animation: rotate 10s infinite linear;
 }
 .main .img-content .container-animation .border-circle .item-circle {
   width: 50px;
@@ -201,20 +202,26 @@ body {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 .main .img-content .container-animation .border-circle .item-circle.item-circle-1 {
+  top: 20%;
+  left: 50%;
   animation: moveTop 5s infinite linear;
 }
 .main .img-content .container-animation .border-circle .item-circle.item-circle-2 {
+  top: 50%;
+  left: 80%;
   animation: moveRight 5s infinite linear;
 }
 .main .img-content .container-animation .border-circle .item-circle.item-circle-3 {
+  top: 80%;
+  left: 50%;
   animation: moveBottom 5s infinite linear;
 }
 .main .img-content .container-animation .border-circle .item-circle.item-circle-4 {
+  top: 50%;
+  left: 20%;
   animation: moveLeft 5s infinite linear;
 }
 @keyframes rotate {
@@ -227,46 +234,46 @@ body {
 }
 @keyframes moveTop {
   0% {
-    top: 50%;
+    top: 20%;
   }
   50% {
     top: -10%;
   }
   100% {
-    top: 50%;
+    top: 20%;
   }
 }
 @keyframes moveRight {
   0% {
-    left: 50%;
+    left: 80%;
   }
   50% {
     left: 110%;
   }
   100% {
-    left: 50%;
+    left: 80%;
   }
 }
 @keyframes moveBottom {
   0% {
-    top: 50%;
+    top: 80%;
   }
   50% {
     top: 110%;
   }
   100% {
-    top: 50%;
+    top: 80%;
   }
 }
 @keyframes moveLeft {
   0% {
-    left: 50%;
+    left: 20%;
   }
   50% {
     left: -10%;
   }
   100% {
-    left: 50%;
+    left: 20%;
   }
 }
 .main .container-text {
@@ -312,29 +319,55 @@ body {
   padding: 1em;
   background-color: #f8f9fa;
 }
-.section .container {
+.section .container-cards {
+  display: flex;
+  flex-wrap: wrap;
   padding: 1em;
   display: flex;
-  flex-direction: column;
 }
-.section .container h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
+.section .container-cards .card {
+  background-color: #343a40;
+  max-width: 350px;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.section .container p {
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  max-width: 600px;
+.section .container-cards .card .card-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ff7f50;
+  margin: 0 auto;
+}
+.section .container-cards .card .card-img img {
+  width: 100%;
+}
+.section .container-cards .card .card-body {
+  padding: 1em;
+}
+.section .container-cards .card .card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff7f50;
+}
+.section .container-cards .card .card-body p {
   text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
 }
-.section.section-1 {
-  background-color: #ff7f50;
-  color: #fff;
+.section .container-cards .card .card-body p.card-text-position {
+  color: #f8f9fa;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
-.section.section-2 .container {
-  align-items: flex-end;
+.section h2 {
+  text-align: center;
+  color: #ff7f50;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {

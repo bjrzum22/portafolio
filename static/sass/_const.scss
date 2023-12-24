@@ -39,6 +39,7 @@ body {
     padding: 1rem;
     background-color: lighten($gray-dark, 10%);
     height: 60px;
+    box-shadow: 0 0 10px rgba($black, 0.5);
 
     .content-icon {
         display: flex;

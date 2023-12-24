@@ -34,7 +34,7 @@
                 border-radius: 50%;
                 position: relative;
                 z-index: 2;
-                animation: rotate 50s infinite linear;
+                animation: rotate 10s infinite linear;
 
                 .item-circle {
                     width: 50px;
@@ -43,23 +43,29 @@
                     border-radius: 50%;
                     position: absolute;
                     z-index: 1;
-                    top: 50%;
-                    left: 50%;
                     transform: translate(-50%, -50%);
 
                     &.item-circle-1 {
+                        top: 20%;
+                        left: 50%;
                         animation: moveTop 5s infinite linear;
                     }
 
                     &.item-circle-2 {
+                        top: 50%;
+                        left: 80%;
                         animation: moveRight 5s infinite linear;
                     }
 
                     &.item-circle-3 {
+                        top: 80%;
+                        left: 50%;
                         animation: moveBottom 5s infinite linear;
                     }
 
                     &.item-circle-4 {
+                        top: 50%;
+                        left: 20%;
                         animation: moveLeft 5s infinite linear;
                     }
                 }
@@ -76,7 +82,7 @@
 
                 @keyframes moveTop {
                     0% {
-                        top: 50%;
+                        top: 20%;
                     }
 
                     50% {
@@ -84,13 +90,13 @@
                     }
 
                     100% {
-                        top: 50%;
+                        top: 20%;
                     }
                 }
 
                 @keyframes moveRight {
                     0% {
-                        left: 50%;
+                        left: 80%;
                     }
 
                     50% {
@@ -98,13 +104,13 @@
                     }
 
                     100% {
-                        left: 50%;
+                        left: 80%;
                     }
                 }
 
                 @keyframes moveBottom {
                     0% {
-                        top: 50%;
+                        top: 80%;
                     }
 
                     50% {
@@ -112,13 +118,13 @@
                     }
 
                     100% {
-                        top: 50%;
+                        top: 80%;
                     }
                 }
 
                 @keyframes moveLeft {
                     0% {
-                        left: 50%;
+                        left: 20%;
                     }
 
                     50% {
@@ -126,7 +132,7 @@
                     }
 
                     100% {
-                        left: 50%;
+                        left: 20%;
                     }
                 }
 
@@ -188,37 +194,67 @@
     padding: 1em;
     background-color: $light;
 
-    .container {
+    .container-cards {
+        display: flex;
+        flex-wrap: wrap;
         padding: 1em;
         display: flex;
-        flex-direction: column;
 
-        h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
+        .card {
+            background-color: $dark;
+            max-width: 350px;
+            padding: 1em;
+            margin: 1em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba($black, 0.5);
 
-        p {
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            max-width: 600px;
-            text-align: justify;
+            .card-img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 5px solid $orange;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .card-body {
+                padding: 1em;
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: $orange;
+                }
+
+                p {
+                    text-align: justify;
+                    color: rgba($white, 0.8);
+
+                    &.card-text-position {
+                        color: $light;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+
+
+
+                }
+            }
         }
     }
 
-    &.section-1 {
-        background-color: $orange;
-        color: $white;
+    h2 {
+        text-align: center;
+        color: $orange;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
 
-
-    }
-
-    &.section-2 {
-        .container {
-            align-items: flex-end;
-        }
     }
 }
 
