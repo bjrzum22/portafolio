@@ -9,6 +9,7 @@
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -160,4 +161,85 @@ body {
   .footer .content-footer .container-footer .item-footer {
     margin-bottom: 1rem;
   }
+}
+.contact .header-contact h1 {
+  color: #ff7f50;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.contact .header-contact p {
+  color: #fff;
+  max-width: 700px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.contact .form {
+  margin-top: 1em;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.contact .form .header-form {
+  display: flex;
+  justify-content: center;
+}
+.contact .form .header-form img {
+  width: 100%;
+  max-width: 100px;
+}
+.contact .form .container-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.contact .form .container-form .form-group label {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.contact .form .container-form .form-group input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #343a40;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact .form .container-form .form-group input:focus {
+  background-color: #ff7f50;
+}
+.contact .form .container-form .form-group textarea {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #343a40;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.contact .form .container-form .form-group textarea:focus {
+  background-color: #ff7f50;
+}
+.contact .form .container-form .form-group input[type=submit] {
+  background-color: #ff7f50;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+.contact .form .container-form .form-group input[type=submit]:hover {
+  background-color: #343a40;
+}
+.contact .form .container-form .form-group input[type=reset] {
+  background-color: #ff7f50;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+.contact .form .container-form .form-group input[type=reset]:hover {
+  background-color: #343a40;
 }

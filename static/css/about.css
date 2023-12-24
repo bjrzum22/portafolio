@@ -9,6 +9,7 @@
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -229,9 +230,15 @@ body {
   text-align: center;
   padding: 1em;
 }
+.container-about .secondary-section .container-identity .container img {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
 .container-about .secondary-section .container-identity .container p {
   color: #1b1b1b;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   text-align: justify;
   padding: 1em;

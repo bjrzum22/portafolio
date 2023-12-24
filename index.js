@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
 const path = require('path'); // Agregamos esta línea para importar el módulo path
+const nodemailer = require('nodemailer');
 const Components = require('./classes/components');
 const components = new Components();
 //usar header
@@ -65,6 +66,48 @@ app.get('/contact', (req, res) => {
         header: components.header('contact'),
         footer: components.footer()
 
+    });
+});
+
+app.post('/msm', (req, res) => {
+    var message = `
+    <h1>Información de contacto</h1>
+    <ul>
+        <li>Nombre: ${req.body.name}</li>
+        <li>Email: ${req.body.email}</li>
+        <li>Teléfono: ${req.body.phone}</li>
+    </ul>
+    <h1>Mensaje</h1>
+    <p>${req.body.message}</p>
+    `;
+    let transporter = nodemailer.createTransport({
+        host: 'mail.bjrsoftware.com',
+        port: 587,
+        secure: false,
+        auth: {
+            user: 'cliente@bjrsoftware.com',
+            pass: 'Damar12345.'
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
+    let mailOptions = {
+        from: '"Contacto" <cliente@bjrsoftware.com>',
+        to: 'bjrsoftware@gmail.com',
+        subject: 'Contacto',
+        text: '<Contacto>',
+        html: message
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+        console.log('enviado');
+        if (error) {
+            console.log(error);
+            res.send('0');
+        } else {
+            //console.log('Message %s sent: %s', info.messageId, info.response);
+            res.send('1');
+        }
     });
 });
 

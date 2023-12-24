@@ -1,1 +1,105 @@
 @import 'import';
+
+.contact {
+    .header-contact {
+        h1 {
+            color: $orange;
+            font-size: 2.5rem;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        p {
+            color: $white;
+            max-width: 700px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    .form {
+        margin-top: 1em;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        .header-form {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                max-width: 100px;
+            }
+
+        }
+
+        .container-form {
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+
+                label {
+                    color: $white;
+                    margin-bottom: 0.5rem;
+                }
+
+                input {
+                    padding: 0.5rem;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $dark;
+                    color: $white;
+                    outline: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &:focus {
+                        background-color: $orange;
+                    }
+                }
+
+                textarea {
+                    padding: 0.5rem;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $dark;
+                    color: $white;
+                    outline: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &:focus {
+                        background-color: $orange;
+                    }
+                }
+
+                input[type="submit"] {
+                    background-color: $orange;
+                    color: $white;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    margin-top: 1rem;
+
+                    &:hover {
+                        background-color: $dark;
+                    }
+                }
+
+                input[type="reset"] {
+                    background-color: $orange;
+                    color: $white;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    margin-top: 1rem;
+
+                    &:hover {
+                        background-color: $dark;
+                    }
+                }
+
+            }
+        }
+    }
+}

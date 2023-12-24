@@ -1,8 +1,53 @@
-<div class="container-services">
-<h1>
+<div class="services">
+<div class="intro">
+ <h1>
     Nuestros Servicios
 </h1>
-<div class="container-services">
-
-</div>
+<p>
+    En BJRSoftware, nos enorgullece ofrecer una amplia gama de servicios de desarrollo que fusionan creatividad, funcionalidad y eficiencia. Estamos comprometidos a hacer realidad tus ideas en línea y potenciar tu presencia digital. Descubre cómo nuestros servicios pueden transformar tus conceptos en soluciones digitales impactantes.
+</p></div>
+   
+    <div class="container-services">
+        <div class="web-development">
+        <div class="description">
+        <h2>
+                Desarrollo Web
+            </h2>
+            <p>
+                Construimos sitios web a medida que no solo son visualmente atractivos, 
+                sino también funcionales y eficientes. Desde aplicaciones simples hasta plataformas complejas,
+                estamos aquí para hacer realidad tus ideas en línea.
+            </p></div>
+            
+            <div class="slider slider1">
+                <div class="slide-track">
+                <% long = 4; i=1; while(i<=long){ %>
+                <div class="slide">
+                    <img src="img/projects/web/web<%=i%>.jpg" alt="">
+                </div>
+                <%  i++; } %>
+            </div>
+        </div>
+        </div>
+        <div class="desk-app">
+        <div class="description">
+        <h2>
+            Aplicaciones de escritorio
+        </h2>
+        <p>
+        Explora el potencial de las aplicaciones de escritorio con nuestras 
+        soluciones basadas en Electron.js. 
+        Creamos aplicaciones multiplataforma robustas y fáciles de usar.
+        </p>
+        </div>
+        <div class="slider slider2">
+            <div class="slide-track">
+                <% long = 6; i=1; while(i<=long){ %>
+                <div class="slide">
+                    <img src="img/projects/desk/desk<%=i%>.png" alt="">
+                </div>
+                <%  i++; } %>
+            </div>
+        </div>
+    </div>
 </div>

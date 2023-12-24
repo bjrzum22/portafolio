@@ -9,6 +9,7 @@
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -159,5 +160,101 @@ body {
   }
   .footer .content-footer .container-footer .item-footer {
     margin-bottom: 1rem;
+  }
+}
+.services {
+  padding: 20px;
+  width: calc(100vw - 40px);
+  overflow: hidden;
+}
+.services .intro {
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services .intro h1 {
+  color: #ff7f50;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.services .intro p {
+  color: #fff;
+  max-width: 700px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.services .container-services .web-development, .services .container-services .desk-app {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.services .container-services .web-development h2, .services .container-services .desk-app h2 {
+  color: #ff7f50;
+}
+.services .container-services .web-development p, .services .container-services .desk-app p {
+  color: #fff;
+  max-width: 500px;
+  margin-top: 10px;
+}
+.services .container-services .web-development .slider, .services .container-services .desk-app .slider {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+.services .container-services .web-development .slider .slide-track, .services .container-services .desk-app .slider .slide-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.services .container-services .web-development .slider .slide, .services .container-services .desk-app .slider .slide {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.services .container-services .web-development .slider .slide img, .services .container-services .desk-app .slider .slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.services .container-services .desk-app {
+  margin-top: 100px;
+  flex-direction: row-reverse;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1100px) {
+  .services {
+    padding: 10px;
+    width: 100%;
+  }
+  .services .container-services .web-development, .services .container-services .desk-app {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .services .container-services .web-development h2, .services .container-services .desk-app h2 {
+    color: #ff7f50;
+  }
+  .services .container-services .web-development p, .services .container-services .desk-app p {
+    color: #fff;
+    max-width: 500px;
+    margin-top: 10px;
+  }
+  .services .container-services .web-development .slider, .services .container-services .desk-app .slider {
+    margin: 1em auto;
+  }
+  .services .container-services .desk-app {
+    margin-top: 100px;
+    flex-direction: row-reverse;
+    margin-bottom: 1em;
   }
 }
